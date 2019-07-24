@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background: #9B0D49;
+  font-size: 10px;
+}
+
+.heart {
+  -webkit-animation: 1s pulse infinite;
+          animation: 1s pulse infinite;
+  margin: auto;
+  position: relative;
+  width: 40vmax;
+}
+
+.heart:before,
+.heart:after {
+  background: #F30420;
+  border-radius: 20vmax 20vmax 4vmax 4vmax;
+  content: "";
+  left: 20vmax;
+  height: 32vmax;
+  position: absolute;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  width: 20vmax;
+}
+
+.heart:after {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+
+.face {
+  background: #222;
+  border-radius: 0 0 10vmax 10vmax;
+  border-top: 2vmax solid #fff;
+  display: block;
+  height: 6vmax;
+  left: 14vmax;
+  position: absolute;
+  top: 16vmax;
+  width: 12vmax;
+  z-index: 5;
+}
+
+.face:before, .face:after {
+  background: #222;
+  border-radius: 4vmax;
+  box-shadow: 0 4vmax 0 -0.9vmax #A60A1C;
+  content: '';
+  display: block;
+  height: 4vmax;
+  position: absolute;
+  bottom: 8vmax;
+  width: 4vmax;
+  z-index: 5;
+}
+
+.face:before {
+  left: -4vmax;
+}
+
+.face:after {
+  right: -4vmax;
+}
+
+h1 {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 20vmax;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 5vmax;
+  margin: 0vmax auto 4vmax;
+  padding: 1vw;
+  text-align: center;
+  width: 50vmax;
+  z-index: 5;
+}
+
+h1:after {
+  border: 1vw solid transparent;
+  border-color: transparent #fff #fff transparent;
+  box-shadow: 0.1vmax 0.1vmax #ddd;
+  content: '';
+  display: block;
+  left: 6vmax;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+@-webkit-keyframes pulse {
+  80% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
+@keyframes pulse {
+  80% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
+p {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 20vmax;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 5vmax;
+  margin: 38vmax auto 4vmax;
+  padding: 1vw;
+  text-align: center;
+  width: 50vmax;
+  z-index: 5;
+  position: relative;
+  bottom: 0px;
+}
+
+p:after {
+  border: 1vw solid transparent;
+  border-color: transparent #fff #fff transparent;
+  box-shadow: 0.1vmax 0.1vmax #ddd;
+  content: '';
+  display: block;
+  left: 6vmax;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
